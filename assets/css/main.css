@@ -60,7 +60,7 @@ header {
 
 .logo img {
     background-size: cover;
-    width: 100%;
+    width: 2.8rem;
     height: 100%;
 }
 
@@ -71,7 +71,8 @@ header {
 }
 
 .menu {
-    width: auto;
+    margin: auto;
+    width: 75%;
     height: auto;
     display: flex;
     box-sizing: border-box;
@@ -179,6 +180,10 @@ section {
     width: 500px;
 }
 
+p {
+    color: rgb(102, 102, 102);
+}
+
 .about {
     width: 100%;
     height: auto;
@@ -186,6 +191,75 @@ section {
     border-radius: 0%;
     padding-top: 5rem;
     padding-bottom: 5rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.box-absolute {
+    width: 70%;
+    height: 40%;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 1;
+    top: 198%;
+    left: 15%;
+    border-radius: 0.5rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Agrega la sombra aquí */
+}
+
+.island-about {
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+    padding-bottom: 8rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 2rem;
+    border-radius: 2rem;
+}
+
+.island-about p, h2 {
+    color: rgb(230, 230, 230) !important;
+    text-align: center;
+}
+
+.island-about h2 {
+    font-size: 2rem;
+}
+
+.contact {
+    width: 100%;
+    height: auto;
+    margin: 0px auto 0px auto;
+    border-radius: 0%;
+    padding-top: 12rem;
+    padding-bottom: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+}
+
+form {
+    width: 50%;
+    margin: auto;
+    margin-top: 3rem;
+    display: grid;
+    text-align: start;
+}
+
+input, select, textarea {
+    width: 100%;
+    margin: 10px auto;
+    padding: 0.5rem;
+    resize: none;
+    border-radius: 0.2rem;
+    color: gray;
+    border: solid rgb(211, 211, 211) 0.1px;
+}
+
+.submit {
+    color: white;
+    font-weight: bold;
+    background-color: #6b6b83;
 }

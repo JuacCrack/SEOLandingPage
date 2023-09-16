@@ -14,7 +14,7 @@
     <header>
         <div class="header-container center">
             <div class="logo center">
-                <img src="assets/images/logofinal.png" alt="Icono">
+                <img src="assets/images/logo-final.png" alt="Icono">
             </div>
             <nav>
                 <ul class="menu">
@@ -71,21 +71,42 @@
     </section>    
 
     <section class="about">
-        <h2 class="gradient-color">Acerca de Nosotros</h2>
-        <p>
-            En Alband Sistemas Informáticos, nos enorgullece ser una empresa líder en el campo de las soluciones tecnológicas. Con una trayectoria de más de 10 años en el sector, hemos acumulado un valioso conocimiento y experiencia que nos permite ofrecer servicios de la más alta calidad a empresas y comercios en todo el mundo.
-
-            Nuestro equipo de expertos en tecnología está formado por profesionales apasionados y altamente capacitados que comparten un compromiso inquebrantable con la excelencia. Estamos dedicados a mantenernos a la vanguardia de las últimas tendencias y avances tecnológicos para brindar a nuestros clientes soluciones de vanguardia.
-            
-            Lo que nos distingue es nuestra capacidad para colaborar estrechamente con nuestros clientes. Entendemos que cada empresa es única, con necesidades y desafíos específicos. Por eso, trabajamos en estrecha colaboración con usted para diseñar soluciones tecnológicas a medida que se adapten perfectamente a sus objetivos y requisitos. Nos enorgullecemos de ser un socio estratégico de confianza que lo ayudará a impulsar su éxito en el mercado.
-            
-        </p>
+        <div class="island-about gradient-bg-color">
+            <h2>Acerca de Nosotros</h2>
+            <p>
+                En Alband Sistemas Informáticos, somos una empresa líder en soluciones tecnológicas con más de 10 años de experiencia. Ofrecemos servicios de alta calidad a nivel mundial, respaldados por nuestro amplio conocimiento y experiencia en el sector.
+            </p>
+        </div>
+        <div class="box-absolute center"></div>
     </section>
 
     <section class="contact">
-        <h2>Contacto</h2>
+        <h2 class="gradient-color">Contacto</h2>
         <p>Si tiene alguna pregunta o necesita más información sobre nuestros servicios, no dude en ponerse en contacto con nosotros. Estamos aquí para ayudarlo.</p>
-        <a href="#">Contáctenos</a>
+        <form action="#" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="ej. Juan" required>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="ej. juan@mana.com.ar" required>
+        
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="ej. +54 9 11 3392-9837" required>
+        
+            <label for="interes">¿En qué estás interesado/a?</label>
+            <select id="interes" name="interes">
+                <option value="App">App</option>
+                <option value="Web">Web</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Otros">Otros</option>
+            </select>
+        
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Hola... Deseo recibir información" required></textarea>
+        
+            <input type="submit" class="submit" value="Enviar">
+        </form>
+        
     </section>
 
     <footer>

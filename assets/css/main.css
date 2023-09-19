@@ -1,9 +1,6 @@
 body {
     margin: 0;
     font-family: Helvetica;
-    background: #aa4b6b;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 ::-webkit-scrollbar {
@@ -21,16 +18,16 @@ body {
 }
 
 .gradient-color {
-    background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b) !important;
-    -webkit-background-clip: text !important;
-    background-clip: text !important;
-    color: transparent !important;
+    color: transparent !important; /* Color de texto transparente */
+    background: linear-gradient(to right, #3A6073, #16222A) !important; /* Gradiente de color de texto */
+    -webkit-background-clip: text !important; /* Aplicar el gradiente de color de texto en navegadores Webkit (como Chrome y Safari) */
+    background-clip: text !important; /* Aplicar el gradiente de color de texto en navegadores estándar */    
 }
 
 .gradient-bg-color {
-    background: #aa4b6b;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #16222A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
 }
 
 header {
@@ -40,6 +37,7 @@ header {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important; 
+    position: absolute;
 }
 
 .header-container {
@@ -48,7 +46,8 @@ header {
     box-sizing: border-box;
     display: flex;
     background-color: white;
-    border-radius: 1rem;
+    border-radius: 0.3rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
     padding: 1rem;
 }
 
@@ -59,9 +58,8 @@ header {
 }
 
 .logo img {
-    background-size: cover;
-    width: 2.5rem;
-    height: 70%;
+    width: 2.2rem;
+    height: 2rem;
     cursor: pointer;
 }
 
@@ -110,6 +108,11 @@ header {
     margin: auto;
 }
 
+.sub-heading {
+    color: #c6dae4;
+    font-size: 1.2rem;
+}
+
 .section {
     width: 85%;
     height: auto;
@@ -121,8 +124,13 @@ header {
 }
 
 .hero {
-    height: 40vh;
-    margin: 3rem auto 4rem auto;
+    border-radius: 0;
+    height: 60vh;
+    width: 100vw;
+    margin: 0;
+    background-image: url(../images/scroll-bg-0.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .main-heading {
@@ -139,6 +147,27 @@ header {
     height: auto;
     margin: 0px auto 0px auto;
     border-radius: 0%;
+}
+
+.empresas {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+}
+
+.empresas figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    cursor: pointer;
+}
+
+.empresas figure {
+    width: 7rem;
+    height: 6.5rem;
+    box-sizing: border-box;
+    margin: auto;
 }
 
 .main-article {
@@ -165,9 +194,11 @@ header {
 .image {
     border-radius: .75rem;
     overflow: hidden;
+    margin: auto;
 }
 
 .image img {
+    width: 90%;
     object-fit: cover; 
     object-position: center; 
 }
@@ -277,8 +308,6 @@ p {
 
 .staff {
     background-image: url(../images/staff.jpg);
-    background-size: 80%;
-    background-repeat: no-repeat;
 }
 
 .island-about {
@@ -289,7 +318,7 @@ p {
     padding-left: 4rem;
     padding-right: 4rem;
     padding-top: 2rem;
-    border-radius: 2rem;
+    border-radius: 0.8rem;
 }
 
 .island-about p, h2 {
@@ -362,7 +391,7 @@ footer {
 }
 
 .content-footer h5 {
-    color: #aa4b6b;
+    color: #3A6073;
     margin: 0rem;
 }
 
@@ -376,8 +405,8 @@ footer {
     box-sizing: border-box;
 }
 
-/* Estilos para pantallas pequeñas (smartphones) */
-@media screen and (max-width: 767px) {
+/* Estilos para pantallas muy muy pequeñas (smartphones) */
+@media screen and (max-width: 360px) {
     .menu {
         display: none;
         visibility: hidden;
@@ -392,22 +421,104 @@ footer {
         width: 2.2rem;
         height: 70%;
     }
-    .logo img {
-        width: 1.9rem;
-        height: 90%;
-    }
     .hero {
-        height: 35vh;
+        height: 65vh;
     }
     .box-absolute {
         width: 80%;
         height: 40%;
-        top: 114rem;
+        top: 162rem;
         left: 10%;
         padding: 1rem;
     }
+    .icon-box {
+        width: 5rem;
+        height: 4rem;
+        box-sizing: border-box;
+        background-position: center;
+        background-size: cover;
+        margin: auto;
+    }
     .contact {
-        padding-top: 16rem;
+        padding-top: 10rem;
+    }
+    .contact p {
+        padding: 1rem;
+    }
+    form {
+        width: 75%;
+    }
+    .content-footer {
+        width: 92%;
+    }
+
+    .content-footer section {
+        padding: 0.5rem;
+    }
+    footer {
+        padding-top: 4rem;
+    }
+    .island-about {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    .col-box figure h2 {
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    .image-grid {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .bg-1 {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+    .bg-4 {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+/* Estilos para pantallas muy pequeñas (smartphones) */
+@media screen and (min-width: 361px) and  (max-width: 375px) {
+    .menu {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+    .header-container {
+        width: 90%;
+        height: 50%;
+        padding: 1rem;
+    }
+    .logo-burguer img {
+        width: 2rem;
+        height: 100%;
+    }
+    .hero {
+        height: 65vh;
+    }
+    .box-absolute {
+        width: 80%;
+        height: 40%;
+        top: 367vh;
+        left: 10%;
+        padding: 1rem;
+    }
+    .icon-box {
+        width: 5rem;
+        height: 4rem;
+        box-sizing: border-box;
+        background-position: center;
+        background-size: cover;
+        margin: auto;
+    }
+    .contact {
+        padding-top: 10rem;
     }
     .contact p {
         padding: 1rem;
@@ -444,17 +555,384 @@ footer {
         visibility: hidden;
         opacity: 0;
     }
-    .image img {
-        width: 100%;
-    }
 }
 
-/* Estilos para pantallas medianas (tablets) */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+/* Estilos para pantallas pequeñas (smartphones) */
+@media screen and (min-width: 376px) and (max-width: 400px) {
+
+    .menu {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+    .header-container {
+        width: 90%;
+        height: 50%;
+        padding: 1rem;
+    }
+    .logo-burguer img {
+        width: 2rem;
+        height: 100%;
+    }
+    .hero {
+        height: 70vh;
+    }
+    .box-absolute {
+        width: 80%;
+        height: 40%;
+        top: 155rem;
+        left: 10%;
+        padding: 1rem;
+    }
+    .icon-box {
+        width: 5rem;
+        height: 4rem;
+        box-sizing: border-box;
+        background-position: center;
+        background-size: cover;
+        margin: auto;
+    }
+    .contact {
+        padding-top: 15rem;
+    }
+    .contact p {
+        padding: 1rem;
+    }
+    form {
+        width: 75%;
+    }
+    .content-footer {
+        width: 90%;
+    }
+    footer {
+        padding-top: 4rem;
+    }
+    .island-about {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-bottom: 10rem;
+    }
+    .col-box figure h2 {
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    .image-grid {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .bg-1 {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+    .bg-4 {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
    
 }
 
 /* Estilos para pantallas grandes (laptop y pantallas más grandes) */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 400px)  and (max-width: 480px){
+
+    
+    .menu {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+    .header-container {
+        width: 90%;
+        height: 50%;
+        padding: 1rem;
+    }
+    .logo-burguer img {
+        width: 2rem;
+        height: 100%;
+    }
+    .hero {
+        height: 70vh;
+    }
+    .box-absolute {
+        width: 80%;
+        height: 40%;
+        top: 145rem;
+        left: 10%;
+        padding: 1rem;
+    }
+    .icon-box {
+        width: 5rem;
+        height: 4rem;
+        box-sizing: border-box;
+        background-position: center;
+        background-size: cover;
+        margin: auto;
+    }
+    .contact {
+        padding-top: 15rem;
+    }
+    .contact p {
+        padding: 1rem;
+    }
+    form {
+        width: 75%;
+    }
+    .content-footer {
+        width: 90%;
+    }
+    footer {
+        padding-top: 4rem;
+    }
+    .island-about {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-bottom: 10rem;
+    }
+    .col-box figure h2 {
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    .image-grid {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .bg-1 {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+    .bg-4 {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+    
+}
+
+/* Estilos para pantallas grandes (laptop y pantallas más grandes) */
+@media screen and (min-width: 481px)  and (max-width: 530px){
+
+    
+    .menu {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+    .header-container {
+        width: 90%;
+        height: 50%;
+        padding: 1rem;
+    }
+    .logo-burguer img {
+        width: 2rem;
+        height: 100%;
+    }
+    .hero {
+        height: 70vh;
+    }
+    .box-absolute {
+        width: 80%;
+        height: 40%;
+        top: 142rem;
+        left: 10%;
+        padding: 1rem;
+    }
+    .icon-box {
+        width: 5rem;
+        height: 4rem;
+        box-sizing: border-box;
+        background-position: center;
+        background-size: cover;
+        margin: auto;
+    }
+    .contact {
+        padding-top: 15rem;
+    }
+    .contact p {
+        padding: 1rem;
+    }
+    form {
+        width: 75%;
+    }
+    .content-footer {
+        width: 90%;
+    }
+    footer {
+        padding-top: 4rem;
+    }
+    .island-about {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-bottom: 10rem;
+    }
+    .col-box figure h2 {
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    .image-grid {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .bg-1 {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+    .bg-4 {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+    
+}
+
+/* Estilos para pantallas grandes (laptop y pantallas más grandes) */
+@media screen and (min-width: 600px) and (max-width: 720px){
+
+    
+    .menu {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+    .header-container {
+        width: 90%;
+        height: 50%;
+        padding: 1rem;
+    }
+    .logo-burguer img {
+        width: 2rem;
+        height: 100%;
+    }
+    .hero {
+        height: 70vh;
+    }
+    .box-absolute {
+        width: 80%;
+        height: 40%;
+        top: 138rem;
+        left: 10%;
+        padding: 1rem;
+    }
+    .icon-box {
+        width: 5rem;
+        height: 4rem;
+        box-sizing: border-box;
+        background-position: center;
+        background-size: cover;
+        margin: auto;
+    }
+    .contact {
+        padding-top: 15rem;
+    }
+    .contact p {
+        padding: 1rem;
+    }
+    form {
+        width: 75%;
+    }
+    .content-footer {
+        width: 90%;
+    }
+    footer {
+        padding-top: 4rem;
+    }
+    .island-about {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-bottom: 10rem;
+    }
+    .col-box figure h2 {
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    .image-grid {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .bg-1 {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+    .bg-4 {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+    
+}
+
+/* Estilos para pantallas grandes (laptop y pantallas más grandes) */
+@media screen and (min-width: 800px){
+
+    
+    .menu {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+    .header-container {
+        width: 80%;
+        height: 50%;
+        padding: 1rem;
+    }
+    .logo-burguer img {
+        width: 2rem;
+        height: 100%;
+    }
+    .hero {
+        height: 70vh;
+    }
+    .box-absolute {
+        width: 60%;
+        height: 40%;
+        top: 125rem;
+        left: 20%;
+        padding: 1rem;
+    }
+    .icon-box {
+        width: 5rem;
+        height: 4rem;
+        box-sizing: border-box;
+        background-position: center;
+        background-size: cover;
+        margin: auto;
+    }
+    .contact {
+        padding-top: 15rem;
+    }
+    .contact p {
+        padding: 1rem;
+    }
+    form {
+        width: 30%;
+    }
+    .content-footer {
+        width: 90%;
+    }
+    footer {
+        padding-top: 4rem;
+    }
+    .island-about {
+        width: 80%;
+        height: 20rem;
+        padding: 4rem;
+        margin: auto;
+    }
+    .col-box figure h2 {
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    .image-grid {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
     
 }
